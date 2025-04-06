@@ -39,7 +39,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="w-full overflow-x-hidden">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center">
           <MainNav />
@@ -135,7 +135,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <Image
-                  src="/placeholder.svg?height=550&width=800"
+                  src="/images/medicines.jpg"
                   width={800}
                   height={550}
                   alt="About Us Image"
@@ -408,6 +408,131 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-primary">
+                  Our Partners
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                  We collaborate with leading pharmaceutical companies and
+                  healthcare providers.
+                </p>
+              </motion.div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 py-12 md:grid-cols-4">
+              {[1, 2, 3, 4].map((_, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center justify-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Image
+                    src="/placeholder.svg?height=80&width=160"
+                    width={160}
+                    height={80}
+                    alt="Partner Logo"
+                    className="h-12 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+              <motion.div
+                className="flex flex-col justify-center space-y-4"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="space-y-2">
+                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                    Ready to Partner with Maxon Enterprises?
+                  </h2>
+                  <p className="text-primary-foreground/80 md:text-xl/relaxed">
+                    Join our network of healthcare providers and experience the
+                    Maxon difference.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link href="#contact">
+                    <Button variant="secondary" className="px-8">
+                      Contact Us Today
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+              <motion.div
+                className="flex flex-col justify-center space-y-4"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Tabs defaultValue="hospitals" className="w-full">
+                  <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="hospitals">Hospitals</TabsTrigger>
+                    <TabsTrigger value="pharmacies">Pharmacies</TabsTrigger>
+                    <TabsTrigger value="clinics">Clinics</TabsTrigger>
+                  </TabsList>
+                  <TabsContent
+                    value="hospitals"
+                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
+                  >
+                    <h3 className="text-lg font-bold">For Hospitals</h3>
+                    <p className="mt-2">
+                      We provide comprehensive pharmaceutical solutions for
+                      hospitals, including bulk supplies, specialized
+                      medications, and medical equipment.
+                    </p>
+                  </TabsContent>
+                  <TabsContent
+                    value="pharmacies"
+                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
+                  >
+                    <h3 className="text-lg font-bold">For Pharmacies</h3>
+                    <p className="mt-2">
+                      We offer a wide range of pharmaceutical products,
+                      competitive pricing, and timely delivery to help
+                      pharmacies serve their customers better.
+                    </p>
+                  </TabsContent>
+                  <TabsContent
+                    value="clinics"
+                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
+                  >
+                    <h3 className="text-lg font-bold">For Clinics</h3>
+                    <p className="mt-2">
+                      We provide tailored solutions for clinics, including
+                      essential medications, medical supplies, and equipment to
+                      support patient care.
+                    </p>
+                  </TabsContent>
+                </Tabs>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="w-full py-12 md:py-24 lg:py-32 bg-sky-50"
+        >
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <motion.div
+                className="space-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Contact Us
                 </div>
@@ -530,128 +655,6 @@ export default function Home() {
                     Send Message
                   </Button>
                 </form>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <motion.div
-                className="space-y-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-primary">
-                  Our Partners
-                </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                  We collaborate with leading pharmaceutical companies and
-                  healthcare providers.
-                </p>
-              </motion.div>
-            </div>
-            <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 py-12 md:grid-cols-4">
-              {[1, 2, 3, 4].map((_, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center justify-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Image
-                    src="/placeholder.svg?height=80&width=160"
-                    width={160}
-                    height={80}
-                    alt="Partner Logo"
-                    className="h-12 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              <motion.div
-                className="flex flex-col justify-center space-y-4"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                    Ready to Partner with Maxon Enterprises?
-                  </h2>
-                  <p className="text-primary-foreground/80 md:text-xl/relaxed">
-                    Join our network of healthcare providers and experience the
-                    Maxon difference.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="#contact">
-                    <Button variant="secondary" className="px-8">
-                      Contact Us Today
-                    </Button>
-                  </Link>
-                </div>
-              </motion.div>
-              <motion.div
-                className="flex flex-col justify-center space-y-4"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Tabs defaultValue="hospitals" className="w-full">
-                  <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="hospitals">Hospitals</TabsTrigger>
-                    <TabsTrigger value="pharmacies">Pharmacies</TabsTrigger>
-                    <TabsTrigger value="clinics">Clinics</TabsTrigger>
-                  </TabsList>
-                  <TabsContent
-                    value="hospitals"
-                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
-                  >
-                    <h3 className="text-lg font-bold">For Hospitals</h3>
-                    <p className="mt-2">
-                      We provide comprehensive pharmaceutical solutions for
-                      hospitals, including bulk supplies, specialized
-                      medications, and medical equipment.
-                    </p>
-                  </TabsContent>
-                  <TabsContent
-                    value="pharmacies"
-                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
-                  >
-                    <h3 className="text-lg font-bold">For Pharmacies</h3>
-                    <p className="mt-2">
-                      We offer a wide range of pharmaceutical products,
-                      competitive pricing, and timely delivery to help
-                      pharmacies serve their customers better.
-                    </p>
-                  </TabsContent>
-                  <TabsContent
-                    value="clinics"
-                    className="p-4 bg-primary-foreground text-foreground rounded-md mt-2"
-                  >
-                    <h3 className="text-lg font-bold">For Clinics</h3>
-                    <p className="mt-2">
-                      We provide tailored solutions for clinics, including
-                      essential medications, medical supplies, and equipment to
-                      support patient care.
-                    </p>
-                  </TabsContent>
-                </Tabs>
               </motion.div>
             </div>
           </div>

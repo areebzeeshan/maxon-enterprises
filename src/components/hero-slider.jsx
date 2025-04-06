@@ -13,7 +13,7 @@ const slides = [
     title: "Leading Pharmaceutical Distribution",
     description:
       "Your trusted partner in pharmaceutical distribution and healthcare solutions",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/images/medicines.jpg",
     cta: "Explore Our Services",
     link: "#services",
   },
@@ -22,7 +22,7 @@ const slides = [
     title: "Quality Medical Supplies",
     description:
       "We provide high-quality medical supplies and equipment to healthcare facilities",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/images/medicines.jpg",
     cta: "Learn More",
     link: "#about",
   },
@@ -31,7 +31,7 @@ const slides = [
     title: "Nationwide Distribution Network",
     description:
       "Our extensive distribution network ensures timely delivery across the country",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/images/medicines.jpg",
     cta: "Contact Us",
     link: "#contact",
   },
