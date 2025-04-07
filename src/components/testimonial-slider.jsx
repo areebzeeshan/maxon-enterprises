@@ -13,7 +13,7 @@ const testimonials = [
     role: "Medical Director, City Hospital",
     content:
       "Maxon Enterprises has been our trusted pharmaceutical partner for over 5 years. Their commitment to quality and timely delivery has been exceptional.",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/images/client.jpg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonials = [
     role: "Pharmacy Manager, HealthCare Pharmacy",
     content:
       "Working with Maxon Enterprises has significantly improved our inventory management and customer satisfaction. Their wide range of products and competitive pricing make them our preferred distributor.",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/images/client.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const testimonials = [
     role: "CEO, Wellness Clinic",
     content:
       "The team at Maxon Enterprises understands our needs and provides tailored solutions. Their customer service is outstanding, and they always go the extra mile to ensure our satisfaction.",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/images/client.jpg",
   },
 ];
 
