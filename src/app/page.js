@@ -324,21 +324,21 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  image: "/placeholder.svg?height=200&width=400",
+                  image: "/images/doctor.avif",
                   title: "New Pharmaceutical Products Launch",
                   description:
                     "Maxon Enterprises announces the launch of new pharmaceutical products to meet the growing healthcare needs.",
                   link: "/blog/new-products",
                 },
                 {
-                  image: "/placeholder.svg?height=200&width=400",
+                  image: "/images/manufacturing.avif",
                   title: "Expanding Our Distribution Network",
                   description:
                     "We are expanding our distribution network to reach more healthcare providers across the country.",
                   link: "/blog/expanding-network",
                 },
                 {
-                  image: "/placeholder.svg?height=200&width=400",
+                  image: "/images/healthcare.jpg",
                   title: "Healthcare Industry Trends 2023",
                   description:
                     "Stay updated with the latest trends and developments in the healthcare and pharmaceutical industry.",
@@ -429,7 +429,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Image
-                    src="/placeholder.svg?height=80&width=160"
+                    src="/images/client.jpg"
                     width={160}
                     height={80}
                     alt="Partner Logo"
